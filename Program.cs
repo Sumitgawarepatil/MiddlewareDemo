@@ -23,6 +23,7 @@ namespace MiddlewareDemo
                 app.UseSwaggerUI();
             }
 
+            app.UseMiddleware<RequestLoggingMiddleware>();
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
